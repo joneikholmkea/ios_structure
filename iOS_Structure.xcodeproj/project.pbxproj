@@ -18,6 +18,9 @@
 		51A8138D2174DA0E00CD80A7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8138C2174DA0E00CD80A7 /* Model.swift */; };
 		51A8138F2174DB3400CD80A7 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8138E2174DB3400CD80A7 /* Presenter.swift */; };
 		51A813912174DE5A00CD80A7 /* MasterViewcontrollerUITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A813902174DE5A00CD80A7 /* MasterViewcontrollerUITableViewDataSource.swift */; };
+		51A813952174E74A00CD80A7 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A813942174E74A00CD80A7 /* Observable.swift */; };
+		51A813992174E83000CD80A7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A813982174E83000CD80A7 /* ViewModel.swift */; };
+		51A8139C2176502400CD80A7 /* ImageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8139B2176502400CD80A7 /* ImageProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		51A8138C2174DA0E00CD80A7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		51A8138E2174DB3400CD80A7 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		51A813902174DE5A00CD80A7 /* MasterViewcontrollerUITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewcontrollerUITableViewDataSource.swift; sourceTree = "<group>"; };
+		51A813942174E74A00CD80A7 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		51A813982174E83000CD80A7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		51A8139B2176502400CD80A7 /* ImageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 		51A8135B2174D9DD00CD80A7 /* iOS_Structure */ = {
 			isa = PBXGroup;
 			children = (
+				51A8139A21764FFC00CD80A7 /* protocols */,
+				51A813942174E74A00CD80A7 /* Observable.swift */,
+				51A813972174E81D00CD80A7 /* ViewModel */,
+				51A813962174E7F600CD80A7 /* Model */,
 				51A8135C2174D9DD00CD80A7 /* AppDelegate.swift */,
 				51A8135E2174D9DD00CD80A7 /* MasterViewController.swift */,
 				51A813602174D9DD00CD80A7 /* DetailViewController.swift */,
@@ -112,7 +122,6 @@
 				51A813652174D9DE00CD80A7 /* Assets.xcassets */,
 				51A813672174D9DE00CD80A7 /* LaunchScreen.storyboard */,
 				51A8136A2174D9DE00CD80A7 /* Info.plist */,
-				51A8138C2174DA0E00CD80A7 /* Model.swift */,
 				51A8138E2174DB3400CD80A7 /* Presenter.swift */,
 				51A813902174DE5A00CD80A7 /* MasterViewcontrollerUITableViewDataSource.swift */,
 			);
@@ -135,6 +144,30 @@
 				51A813802174D9DE00CD80A7 /* Info.plist */,
 			);
 			path = iOS_StructureUITests;
+			sourceTree = "<group>";
+		};
+		51A813962174E7F600CD80A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51A8138C2174DA0E00CD80A7 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		51A813972174E81D00CD80A7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				51A813982174E83000CD80A7 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		51A8139A21764FFC00CD80A7 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				51A8139B2176502400CD80A7 /* ImageProtocols.swift */,
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +304,11 @@
 				51A813612174D9DD00CD80A7 /* DetailViewController.swift in Sources */,
 				51A8135F2174D9DD00CD80A7 /* MasterViewController.swift in Sources */,
 				51A8135D2174D9DD00CD80A7 /* AppDelegate.swift in Sources */,
+				51A813952174E74A00CD80A7 /* Observable.swift in Sources */,
+				51A8139C2176502400CD80A7 /* ImageProtocols.swift in Sources */,
 				51A813912174DE5A00CD80A7 /* MasterViewcontrollerUITableViewDataSource.swift in Sources */,
 				51A8138D2174DA0E00CD80A7 /* Model.swift in Sources */,
+				51A813992174E83000CD80A7 /* ViewModel.swift in Sources */,
 				51A8138F2174DB3400CD80A7 /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,8 +11,9 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    let presenter = Presenter()
-
+   // let presenter = Presenter()   // belongs to Model - Presenter - ViewController
+    let viewModel = ViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,6 +25,9 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "updateUI"), object: nil, queue: OperationQueue.main) { (notification) in
+            self.tableView.reloadData()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -32,9 +36,10 @@ class MasterViewController: UITableViewController {
     }
 
     @objc
-    func insertNewObject(_ sender: Any) {
-        presenter.addEntry()
-        
+    func insertNewObject(_ sender: Any)
+    {
+        //presenter.addEntry() // belongs to Model - Presenter - ViewController
+        viewModel.addEntry()
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
     }
@@ -44,7 +49,8 @@ class MasterViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let object = presenter[indexPath.row]
+                //let object = presenter[indexPath.row]   // belongs to Model - Presenter - ViewController
+                let object = viewModel[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
